@@ -1,7 +1,9 @@
 import sys
 import numpy as np
-import tensorflow as tf
-import tensorflow.contrib.slim as slim
+import tensorflow.compat.v1 as tf
+#import tensorflow.contrib.slim as slim
+#import tensorflow.compat.v1 as tf
+import tf_slim as slim
 
 if sys.version_info.major == 3:
     xrange = range
@@ -17,6 +19,6 @@ def im2uint8(x):
 
 def ResnetBlock(x, dim, ksize, scope='rb'):
     with tf.variable_scope(scope):
-        net = slim.conv2d(x, dim, [ksize, ksize], scope='conv1')
+        net = slim.conv2d(x, dim, [ksize, ksize], scope='conv1')#input, output, kernel size
         net = slim.conv2d(net, dim, [ksize, ksize], activation_fn=None, scope='conv2')
-        return net + x
+        return net + x #jak to działa???

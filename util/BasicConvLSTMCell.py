@@ -1,6 +1,7 @@
-import tensorflow as tf
-import tensorflow.contrib.slim as slim
+import logging
 
+import tensorflow as tf
+import tf_slim as slim
 
 class ConvRNNCell(object):
     def __call__(self, inputs, state, scope=None):
