@@ -5,5 +5,5 @@ logs/
 *results*
 *__pycache__*
 *.sh
-datasets
+basicsr/datasets
 basicsr.egg-info
