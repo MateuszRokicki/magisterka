@@ -1,3 +1,6 @@
 [submodule "NAFNet3"]
 	path = NAFNet3
 	url = https://github.com/megvii-research/NAFNet
+[submodule "tlsc3"]
+	path = tlsc3
+	url = https://github.com/megvii-research/tlsc
