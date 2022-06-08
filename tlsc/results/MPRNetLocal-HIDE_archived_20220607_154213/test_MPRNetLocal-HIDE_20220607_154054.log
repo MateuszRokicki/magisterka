@@ -1,0 +1,74 @@
+2022-06-07 15:40:54,107 INFO: 
+                ____                _       _____  ____
+               / __ ) ____ _ _____ (_)_____/ ___/ / __ \
+              / __  |/ __ `// ___// // ___/\__ \ / /_/ /
+             / /_/ // /_/ /(__  )/ // /__ ___/ // _, _/
+            /_____/ \__,_//____//_/ \___//____//_/ |_|
+     ______                   __   __                 __      __
+    / ____/____   ____   ____/ /  / /   __  __ _____ / /__   / /
+   / / __ / __ \ / __ \ / __  /  / /   / / / // ___// //_/  / /
+  / /_/ // /_/ // /_/ // /_/ /  / /___/ /_/ // /__ / /<    /_/
+  \____/ \____/ \____/ \____/  /_____/\____/ \___//_/|_|  (_)
+    
+Version Information: 
+	BasicSR: 1.2.0+b6c7c92
+	PyTorch: 1.11.0+cpu
+	TorchVision: 0.12.0+cpu
+2022-06-07 15:40:54,108 INFO: 
+  name: MPRNetLocal-HIDE
+  model_type: ImageRestorationModel
+  scale: 1
+  num_gpu: 1
+  manual_seed: 10
+  datasets:[
+    test:[
+      name: gopro-test
+      type: PairedImageDataset
+      dataroot_gt: ./datasets/HIDE/test/target
+      dataroot_lq: ./datasets/HIDE/test/input
+      io_backend:[
+        type: disk
+      ]
+      phase: test
+      scale: 1
+    ]
+  ]
+  network_g:[
+    type: MPRNetLocal
+    base_size: 384
+  ]
+  path:[
+    pretrain_network_g: ./experiments/pretrained_models/MPRNet-GoPro.pth
+    strict_load_g: True
+    resume_state: None
+    param_key: state_dict
+    results_root: D:\Studia\Magisterskie\Magisterka\programy\Scale-recurrent Network for Deep Image Deblurring\SRN-Deblur\tlsc\results\MPRNetLocal-HIDE
+    log: D:\Studia\Magisterskie\Magisterka\programy\Scale-recurrent Network for Deep Image Deblurring\SRN-Deblur\tlsc\results\MPRNetLocal-HIDE
+    visualization: D:\Studia\Magisterskie\Magisterka\programy\Scale-recurrent Network for Deep Image Deblurring\SRN-Deblur\tlsc\results\MPRNetLocal-HIDE\visualization
+  ]
+  val:[
+    save_img: False
+    grids: False
+    metrics:[
+      psnr:[
+        type: calculate_psnr
+        crop_border: 0
+        test_y_channel: False
+      ]
+      ssim:[
+        type: calculate_ssim
+        crop_border: 0
+        test_y_channel: False
+      ]
+    ]
+  ]
+  dist_params:[
+    backend: nccl
+    port: 29500
+  ]
+  dist: False
+  rank: 0
+  world_size: 1
+  auto_resume: False
+  is_train: False
+
