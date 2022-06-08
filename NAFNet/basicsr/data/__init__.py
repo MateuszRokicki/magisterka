@@ -13,7 +13,7 @@ import torch.utils.data
 from functools import partial
 from os import path as osp
 
-from NAFNet.basicsr.data.prefetch_dataloader import PrefetchDataLoader
+from prefetch_dataloader import PrefetchDataLoader
 from NAFNet.basicsr.utils import get_root_logger, scandir
 from NAFNet.basicsr.utils.dist_util import get_dist_info
 
