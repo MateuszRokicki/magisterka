@@ -4,9 +4,11 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DeepRFT/DeepRFT" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/NAFNet" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/NAFNet2" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/RLF/blur-kernel-space-exploring" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/STFAN" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/STFAN/NAFNet" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tlsc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tlsc2" vcs="Git" />
   </component>
 </project>
